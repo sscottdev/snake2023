@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<link rel="stylesheet" href="style.css">
+<h1 class="title">Snake</h1>
+<canvas id="game" width="400" height="400"></canvas>
+<br><div id="ip">
+</div>
+<div id="restart">
+</div>
+<div class="highscore" id="highscore">
+</div>
+
+    <!-- Trigger/Open The Modal -->
+    <button class="speedBtn" id="myBtn">Set Speed</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="number" id="speedInput" placeholder="Set the speed">
+            <button onclick="setSpeed()"id="speedButton">Set speed</button>
+            <h3>Anything above 50 will make you immediately lose the game</h3>
+            <h4>Default speed is 9</h4>
+        </div>
+
+    </div>
+
+
+<!-- Trigger/Open The Modal-->
+<button class="bgButton" id="bgButton">Set Background Color</button>
+
+<!-- The Modal -->
+<div id="bgModal" class="bgModal">
+
+    <!-- Modal content -->
+    <div class="bg-content">
+        <span class="close">&times;</span>
+        <input  class="bgInput" type="color" id="bgInput" placeholder="Set the background color">
+        <button onclick="setBg()"id="bgButtonn">Set background</button>
+        <h3>Changing the color to red will make the apple invisable</h3>
+        <h4>Default background is black</h4>
+    </div>
+
+</div>
+
+
+<button class="nameButton" id="nameButton">Set Username</button>
+
+<!-- The Modal -->
+<div id="nameModal" class="nameModal">
+
+    <!-- Modal content -->
+    <div class="name-content">
+    <!--Input username-->
+        <span class="close">&times;</span>
+        <input  class="nameInput" type="text" id="nameInput" placeholder="Set the username">
+        <button onclick="setName()"id="nameButtonn">Set username</button>
+        <h3>This will be your username in the leaderboard</h3>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<span class="fps" id="fps">--</span></div>
+
+<div class="devWarning" id="devWarning">
+    <span class="close"></span>
+    <div class="dev-content">
+        <h2>ENABLING DEV TOOLS WILL RESET YOUR HIGH SCORE, CONTINUE?</h2>
+        <button onclick="enableDevTools()">Yes</button>
+        <button onclick="disableDevTools()">No</button>
+    </div>
+</div>
+
+
+<button id="colorBtn" class="setColorBtn">Set Tail Color</button>
+
+<div class="colorModal" id="colorModal">
+    <span class="close"></span>
+    <div class="color-content">
+        <input  default="green" class="colorInput" type="color" id="colorInput">
+        <button onclick="setColor()">Set color</button>
+        <h3 id="colorWarning">Warning: Setting the color to black will make the game unplayable</h3>
+    </div>
+</div>
+
+
+<button id="appleBtn" class="appleBtn">Set Custom Apple Color</button>
+
+<div class="appleModal" id="appleModal">
+    <span class="close"></span>
+    <div class="apple-content">
+        <input  default="red" class="appleInput" type="color" id="appleInput">
+        <button onclick="setAppleColor()">Set color</button>
+        <h3 id="appleWarning">Warning: Setting the color to the color background will make the apple invisible</h3>
+    </div>
+</div>
+
+
+<div id="popup"></div>
+
+
+<!--
+<button id="soundBtn" class="setSoundBtn">Set Custom Sound</button>
+
+<div class="soundModal" id="soundModal">
+    <span class="close"></span>
+    <div class="sound-content">
+    <h2>Upload a custom sound</h2>
+    <input class="inputSound" type="file" id="soundInput">
+
+</div>
+-->
+
+
+
+
+
+
+
+<button id="devBtn" onclick="devTools()" class="devtools">Enable Dev Tools (BETA)</button>
+
+
+
+
+
+
+<div class="leaderboard" id="leaderboard">
+    <h1>Leaderboard:</h1>
+    <div class="leaderboardContent" id="leaderboardContent">
+    </div>
+</div>
+
+
+
+<link rel="stylesheet" href="style.css">
+<script src="index.js"></script>
+<script src="modal.js"></script>
+</div>
+</body>
+</html>
